@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Strings Attached Communications</title>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Lato:300,300i,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="background">
+  <div class="overlay">
+    <p>In July 2017, </p>
+  </div>
+
+<div id="wrapper" class="wrapper">
+
+  <header class="logo">
+
+      <img src="nsa_logo_white.png" id="logo" alt="Logo, Cups with cut string">
+      <h1>No Strings Attached</h1>
+      <p>Wireless Cup &amp; String Phone</p>
+
+  </header>
+
+  <section>
+    <h2>Worldwide Coverage</h2>
+    <div class="contain">
+      <div class="text">
+        <p>Not limited by the string length, the No Strings Attached phone allows you to talk to anyone anywhere. You'll never lose reception again, even in an elevator.</p>
+      </div>
+      <div class="video">
+        <div id="video1"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Intuitive User Interface</h2>
+    <div class="contain">
+      <div class="text">
+        <p>The lightweight build accommodates an unlimited number of contacts, and the ergonomic design lets you browse them quickly and effortlessly.</p>
+      </div>
+      <div class="video">
+        <div id="video2"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Reliable &amp; Fast Messaging</h2>
+    <div class="contain">
+      <div class="text">
+        <p>The organic input interface is designed to feel natural in your hands. It's also flexible &ndash; you choose your character size and writing surface.</p>
+      </div>
+      <div class="video">
+        <div id="video3"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Military-grade Materials</h2>
+    <div class="contain">
+      <div class="text">
+        <p>Made of 96% plastic and 12% kevlar, the No Strings Attached phone is completely waterproof and withstands impact of falls from considerable height. Extensively tested. Lifetime hardware warranty.</p>
+      </div>
+      <div class="video">
+        <div id="video4"></div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+</div>
+
+</div>
+<script>
+
+  // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('video1', {
+      videoId: 'zm2Ot7kToF8',
+      playerVars: {
+        rel: 0,
+        showinfo: 0,
+      },
+    });
+
+    player = new YT.Player('video2', {
+      videoId: 'W3ZLi-0O1Zw',
+      playerVars: {
+        rel: 0,
+        showinfo: 0,
+      },
+    });
+
+    player = new YT.Player('video3', {
+      videoId: 'DB0OEHfHE8E',
+      playerVars: {
+        rel: 0,
+        showinfo: 0,
+      },
+    });
+
+    player = new YT.Player('video4', {
+      videoId: 'v1_6WwFploo',
+      playerVars: {
+        rel: 0,
+        showinfo: 0,
+      },
+    });
+
+  }
+</script>
+</body>
+</html>
