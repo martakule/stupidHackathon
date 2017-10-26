@@ -12,7 +12,6 @@ html {
 body, html {
   height: 100%;
   margin: 0;
-  /*background-color: grey;*/
   font-family: 'Lato', sans-serif;
   background-image: url("bg.gif");
 
@@ -24,6 +23,7 @@ body, html {
 }
 
 .background {
+  display: none;
   background-color: rgba(0, 0, 0, .6);
   background-size: cover;
   background-attachment: fixed;
@@ -34,13 +34,35 @@ body, html {
   margin:auto;
 }
 
+.overlay {
+  display: block;
+  z-index: 1000;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  padding: 3em 1em;
+  font-size: 2em;
+}
+
+button {
+  font-size: 2em;
+  background-color: rgb(233,63,47);
+  color:white;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 15px;
+  box-shadow: grey 3px 3px 3px;
+  margin-top: .5em;
+}
+
 .contain {
   display: flex;
   flex-flow: row;
   justify-content:space-between;
 }
-
-
 
 section:nth-child(odd) .contain {
   flex-flow: row-reverse;
@@ -52,11 +74,15 @@ section:nth-child(even) .text {
 
 section {
   background: #464646;
-  padding-bottom: 2em;
+  padding: 3em 0;
 }
 
 section:nth-child(odd) {
   background-color: #676767;
+}
+
+section:nth-child(odd) > h2 {
+  background: linear-gradient(to right, rgba(233,63,47,1), rgba(233,63,47,.05));
 }
 
 .video {
@@ -91,7 +117,7 @@ section:nth-child(odd) {
   text-align: center;
   height: 100%;
   margin-bottom: 1em;
-  padding: 311px 10px 311px 10px;
+  padding: 22% 5%;
   margin:auto;
   letter-spacing: 3px;
   text-shadow: 1px 1px 3px black;
@@ -123,17 +149,14 @@ h2 {
   color:white;
   font-weight: 700;
   font-size: 3em;
-  margin:0;
   text-transform: uppercase;
   letter-spacing: 3px;
   z-index: 10;
-  padding: 5px;
   width: 100%;
-  margin:0;
   text-align: center;
-  padding:28px 0 0 0;
-  border-bottom: 2px solid #e93f34;
-  margin-bottom: 28px;
+  padding:0;
+  background: linear-gradient(to left, rgba(233,63,47,1), rgba(233,63,47,.05));
+  margin: 0 0 28px 0;
 }
 
 p {
@@ -159,11 +182,6 @@ p {
     margin: 1em auto;
     text-align: center !important;
   }
-
-  h2 {
-    padding: 28px 7px 0 7px;
-  }
-
 }
 
 @media (max-width: 600px) {
