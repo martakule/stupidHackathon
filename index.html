@@ -14,14 +14,14 @@
 <body>
 
   <div class="overlay">
-    <p>Hi, this is <a href="https://martakule.github.io/" target="_blank">Marta Kule</a>! <a href="http://matt.newelski.com/" target="_blank">Matt Newelski</a> and I went to the <a href="http://stupidhacktoronto.com/" target="_blank">Stupid Hackathon Toronto 2017</a> to spend some quality siblings time together. After brainstorming a few brilliant ideas, including a fake dating site (Plenty of Catfish) and an AI assistant with attitude, we settled on something truly groundbreaking: an innovative twist on the old cup-and-string phone. What if it was... wireless? Our project consited mostly of demonstration videos, thought up and directed by Matt. Even though Matt is an insanely talented full-stack developer, he left the website to me, for the sake of practice. Enjoy!</p>
-    <button>Enter</button>
+    <p><a href="http://matt.newelski.com/" target="_blank">Matt Newelski</a> and <a href="https://martakule.github.io/" target="_blank">Marta Kule</a> went to the <a href="http://stupidhacktoronto.com/" target="_blank">Stupid Hackathon Toronto 2017</a> to spend some quality siblings time together. After brainstorming a few brilliant ideas, including a fake dating site (<span style="font-style: italic;">Plenty of Catfish</span>) and an AI assistant with attitude, we settled on disrupting the cup-and-string phone industry. Matt is an insanely talented full-stack developer, but he left the website to me, for the sake of practice, while he edited the videos.</p>
+    <button id="button">View</button>
   </div>
 
 <div class="background">
 
 
-  <div id="wrapper" class="wrapper">
+  <div class="wrapper">
 
     <header class="logo">
         <img src="nsa_logo_white.png" id="logo" alt="Logo, Cups with cut string">
@@ -82,6 +82,14 @@
 
 <script>
 
+  // Remove overlay and show website on button click
+  // 
+  document.getElementById("button").onclick = function() { 
+    document.querySelector(".overlay").style.display = "none";
+    document.querySelector(".background").style.display = "block";
+  };
+
+  // Embed the Youtube videos
   // Load the IFrame Player API code asynchronously.
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/player_api";

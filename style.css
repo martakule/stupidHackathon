@@ -37,25 +37,43 @@ body, html {
 .overlay {
   display: block;
   z-index: 1000;
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
-  background: white;
+  background: #F8F8FF;
   width: 100vw;
   height: 100vh;
-  padding: 3em 1em;
-  font-size: 2em;
+  padding: 2em 1em;
+  font-size: 1.5em;
 }
 
 button {
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: rgb(233,63,47);
   color:white;
   border: none;
-  border-radius: 15px;
+  border-radius: 3px;
   padding: 6px 15px;
-  box-shadow: grey 3px 3px 3px;
+  box-shadow: #a5a5a5 10px 10px 20px;
   margin-top: .5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+a {
+  color: rgb(233,63,47);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #a5a5a5;
+}
+
+a:hover {
+  color:black;
 }
 
 .contain {
@@ -115,7 +133,7 @@ section:nth-child(odd) > h2 {
 
 .logo {
   text-align: center;
-  height: 100%;
+  height: 100vh;
   margin-bottom: 1em;
   padding: 22% 5%;
   margin:auto;
@@ -186,6 +204,9 @@ p {
 
 @media (max-width: 600px) {
 
+  .overlay, button {
+    font-size: 1.2em
+  }
   h1 {
     font-size: 3em;
   }
