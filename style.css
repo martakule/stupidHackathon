@@ -38,7 +38,6 @@ body, html {
 .logo {
   text-align: center;
   height: 100vh;
-  margin-bottom: 1em;
   padding: 22% 5%;
   margin:auto;
   letter-spacing: 3px;
@@ -77,6 +76,7 @@ h2 {
   width: 100%;
   text-align: center;
   padding:0;
+  background: rgb(233,63,47);
   background: linear-gradient(to left, rgba(233,63,47,1), rgba(233,63,47,.05));
   margin: 0 0 28px 0;
 }
@@ -84,7 +84,6 @@ h2 {
 /* Intro with button */
 
 .overlay {
-  display: block;
   z-index: 1000;
   position: fixed;
   left: 0px;
